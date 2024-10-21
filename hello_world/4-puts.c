@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-/* Fonction principale */
-int main(void)
+int main(void) /* Fonction */
 {
 	/* Fontion permettant d'afficher la phrase suivante */
 	puts("\"Programming is like building a multilingual puzzle");
