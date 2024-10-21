@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Fonction */
+/* Fonction main */
 int main(void)
 {
 	/* Fontion permettant d'afficher la phrase suivante */
