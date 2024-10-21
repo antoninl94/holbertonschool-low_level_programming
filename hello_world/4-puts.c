@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* Fonction main */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	/* Fontion permettant d'afficher la phrase suivante */
