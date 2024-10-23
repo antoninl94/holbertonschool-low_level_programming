@@ -1,20 +1,15 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry point
  * This program print _putchar
- * p: print "_putchar"
  * Return: Always 0 (Success)
  */
 
-void p(void) /* P: print "-putchar" */
-{
-	printf("_putchar\n");
-}
-
 int main(void)
 {
-	p();
+	printput();
 
 	return (0);
 }
