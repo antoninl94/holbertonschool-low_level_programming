@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void printp(void)
+void prtp(void)
 {
 	printf("_putchar\n");
 }
