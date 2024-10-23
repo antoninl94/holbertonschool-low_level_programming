@@ -3,7 +3,7 @@
 
 /**
  * main - Entry point
- * This program print _putchar
+ * This program print
  * Return: Always 0 (Success)
  */
 
