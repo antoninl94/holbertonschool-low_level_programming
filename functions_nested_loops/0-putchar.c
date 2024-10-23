@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	printput();
+	printp();
 
 	return (0);
 }
