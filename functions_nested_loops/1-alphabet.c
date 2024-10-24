@@ -1,8 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - function to print alphabet
- * @ch: argument
- * Return: nothing
+ * print_alphabet - print the ch character to stdout
  */
 void print_alphabet(void)
 {
