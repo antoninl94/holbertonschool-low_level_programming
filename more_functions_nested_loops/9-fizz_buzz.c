@@ -2,12 +2,7 @@
 
 /**
  * fizz_buzz - will print number from 1 to 100
- *
- * main - Entry point
- *
- * Return: Always 0 (Success)
  */
-
 void fizz_buzz(void)
 {
 	int i;
@@ -38,6 +33,10 @@ void fizz_buzz(void)
 	putchar('\n');
 }
 
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	fizz_buzz();
