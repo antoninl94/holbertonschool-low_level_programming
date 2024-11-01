@@ -11,20 +11,18 @@ int _atoi(char *s)
 	int sign;
 	int num;
 	int let;
-	
+
 	i = 0;
 	sign = 1;
 	num = 0;
 	let = 0;
-	
+
 	while (s[i] != '\0')
 	{
-	/* increment if s[i] == space or == letters */
+		/* increment if s[i] == space or == letters */
 		if (s[i] == ' ')
-		{
 			i++;
-		}
-	/* manage '-' and '+' signs */
+		/* manage '-' and '+' signs */
 		else if (s[i] == '+' || s[i] == '-')
 		{
 			if (s[i] == '-')
@@ -33,7 +31,7 @@ int _atoi(char *s)
 			}
 			i++;
 		}
-	/* display intgers if integer turn let = 1 (true) */
+		/* display intgers if integer turn let = 1 (true) */
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			num = num * 10 + (s[i] - '0');
@@ -43,14 +41,9 @@ int _atoi(char *s)
 		else
 		{
 			if (let == 1)
-			{
 				break;
-			}
-			else
-			{
-				i++;
-			}
+			i++;
 		}
 	}
-	return num * sign;
+	return (num * sign);
 }
