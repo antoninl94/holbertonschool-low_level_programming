@@ -13,7 +13,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (*dest)
 	{
-		++dest;
+		dest++;
 	}
 	while (*src && n--)
 	{
