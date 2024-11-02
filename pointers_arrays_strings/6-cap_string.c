@@ -16,7 +16,7 @@ char *cap_string(char *str)
 		*ptr == ',' || *ptr == ';' || *ptr == '.' ||
 		*ptr == '!' || *ptr == '?' || *ptr == '"' ||
 		*ptr == '(' || *ptr == ')' || *ptr == '{' ||
-		*ptr == '}' || *ptr == '-')
+		*ptr == '}')
 		{
 			next = 1;
 		}
