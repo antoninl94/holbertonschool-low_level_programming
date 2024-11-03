@@ -7,32 +7,27 @@
  */
 char *leet(char *str)
 {
-	char *ptr_a = str;
-	char *ptr_e = str;
-	char *ptr_o = str;
-	char *ptr_t = str;
-	char *ptr_l = str;
+	char *ptr = str;
+	int tl[256] = {0};
 
-	while (*ptr_a != '\0' && *ptr_e != '\0' &&
-	*ptr_o != '\0' && *ptr_t != '\0' && *ptr_l != '\0')
+	tl['a'] = '4';
+	tl['A'] = '4';
+	tl['e'] = '3';
+	tl['E'] = '3';
+	tl['o'] = '0';
+	tl['O'] = '0';
+	tl['t'] = '7';
+	tl['T'] = '7';
+	tl['l'] = '1';
+	tl['L'] = '1';
+
+	while (*ptr != '\0')
 	{
-		if (*ptr_a == 'a' || *ptr_a == 'A' ||
-		*ptr_e == 'e' || *ptr_e == 'E' ||
-		*ptr_o == 'o' || *ptr_o == 'O' ||
-		*ptr_t == 't' || *ptr_t == 'T' ||
-		*ptr_l == 'l' || *ptr_l == 'L')
-		{
-			*ptr_a = '4';
-			*ptr_e = '3';
-			*ptr_o = '0';
-			*ptr_t = '7';
-			*ptr_l = '1';
-		}
-		ptr_a++;
-		ptr_e++;
-		ptr_o++;
-		ptr_t++;
-		ptr_l++;
+		if (tl[(unsigned char)*ptr])
+	{
+		*ptr = tl[(unsigned char)*ptr];
+	}
+		ptr++;
 	}
 	return (str);
 }
