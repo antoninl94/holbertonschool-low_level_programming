@@ -4,7 +4,7 @@
  * _strpbrk - locate a char in a string
  * @accept: the string to compare
  * @s: the string to be compared
- * return: s at the first occurence in *s otherwise return NULL
+ * Return: s at the first occurence in *s
  */
 
 char *_strpbrk(char *s, char *accept)

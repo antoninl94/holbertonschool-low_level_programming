@@ -4,7 +4,7 @@
  * _strspn - get the length of a prefix substring
  * @s: the string that will be compared
  * @accept: the char that will be compared with *s
- * return: the number of char == *accept
+ * Return: the number of char == *accept
  */
 
 unsigned int _strspn(char *s, char *accept)
