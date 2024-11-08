@@ -5,7 +5,7 @@
  * is_prime_number_aux - test if n is prime number
  * @n: the number to test
  * @i: the number that will test n
- * Return : the result of the test
+ * Return: the result of the test
  */
 int is_prime_number_aux(int n, int i)
 {
