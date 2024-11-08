@@ -8,15 +8,15 @@
 
 int _sqrt_recursion_aux(int n, int i)
 {
-	if (n < 0)
+	if (i * i < 0)
 	{
 		return (-1);
 	}
-	else if (n == 1)
+	else if (i * i > n)
 	{
-		return (1);
+		return (-1);
 	}
-	else if (n == i * i)
+	else if (i * i == n)
 	{
 		return (i);
 	}
