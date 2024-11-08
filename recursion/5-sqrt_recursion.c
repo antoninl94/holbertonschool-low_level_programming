@@ -3,7 +3,9 @@
 /**
  * _sqrt_recursion - return the natural square root
  * @n: the base number
- * Return: -1 if n is negative otherwise the square root
+ * @i: the square root
+ * Return: -1 if n is negative or i
+ * greater than n otherwise the square root
  */
 
 int _sqrt_recursion_aux(int n, int i)
@@ -25,6 +27,11 @@ int _sqrt_recursion_aux(int n, int i)
 		return (_sqrt_recursion_aux(n, i + 1));
 	}
 }
+/**
+ * _sqrt_recursion - return the natural square root
+ * @n: the base number
+ * Return: result of the _sqrt_recursion_aux function
+ */
 int _sqrt_recursion(int n)
 {
 	return (_sqrt_recursion_aux(n, 0));
