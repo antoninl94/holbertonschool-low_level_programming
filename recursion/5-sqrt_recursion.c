@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - return the natural square root
+ * _sqrt_recursion_aux - return the natural square root
  * @n: the base number
  * @i: the square root
  * Return: -1 if n is negative or i
