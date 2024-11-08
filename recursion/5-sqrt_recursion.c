@@ -6,13 +6,15 @@
  * Return: -1 if n is negative otherwise the square root
  */
 
-int _sqrt_recursion(int n)
+int _sqrt_recursion_aux(int n, int i)
 {
-	int i = 0;
-
 	if (n < 0)
 	{
 		return (-1);
+	}
+	else if (n == 1)
+	{
+		return (1);
 	}
 	else if (n == i * i)
 	{
@@ -20,6 +22,10 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-	return (_sqrt_recursion(i + 1));
+		return (_sqrt_recursion_aux(n, i + 1));
 	}
+}
+int _sqrt_recursion(int n)
+{
+	return (_sqrt_recursion_aux(n, 0));
 }
