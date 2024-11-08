@@ -9,11 +9,16 @@
  */
 int is_prime_number_aux(int n, int i)
 {
-	if (n % 2 == 0)
+	if ((n % 2 == 0 && n != 2) || n == 1 || n / i == n % 10 || n == 0 ||
+	n * -1 == 1)
 		return (0);
-	else if (n / i != 1)
-		return (0);
-	else if (n / i == 1 && n / 1 == n)
+	else if (n / i == 1 && n / 1 == n && n % 10 == 1)
+		return (1);
+	else if (n / i == 1 && n / 1 == n && n % 10 == 3)
+		return (1);
+	else if (n / i == 1 && n / 1 == n && n % 10 == 7)
+		return (1);
+	else if (n / i == 1 && n / 1 == n && n % 10 == 9)
 		return (1);
 	else
 		return (is_prime_number_aux(n, i + 1));
