@@ -9,6 +9,11 @@
  */
 int is_prime_number_aux(int n, int i)
 {
+/* la bonne réponse était :
+if (n % i == 0)
+	return (0);
+if (i * i > n)
+	return (1) */
 	if ((n % 2 == 0 && n != 2) || n == 1 || n / i == n % 10 || n == 0 ||
 	n * -1 == 1)
 		return (0);
@@ -31,5 +36,5 @@ int is_prime_number_aux(int n, int i)
  */
 int is_prime_number(int n)
 {
-	return (is_prime_number_aux(n, 1));
+	return (is_prime_number_aux(n, 1)); /* il aurait fallu initialiser i = 2 */
 }
