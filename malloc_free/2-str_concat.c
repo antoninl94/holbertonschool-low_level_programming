@@ -10,19 +10,23 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr = s1;
+	char *ptr;
+	int i = 0;
+	int j = 0;
 
-	if (s1 == NULL || s2 == NULL)
+	if ((s1 == NULL && s2 == NULL) || s1 == NULL || s2 == NULL)
 		return (NULL);
 
-	ptr = malloc(sizeof(char));
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0')
+		j++;
+
+	ptr = malloc(sizeof(char) * (i + j + 1));
 	if (ptr == NULL)
 		return (NULL);
 
-	while (*s1 != '\0')
-		s1++;
-	while (*s2 != '\0')
-		*s1++ = *s2++;
-	
+	ptr = s1 + s2[j];
+
 	return (ptr);
 }
