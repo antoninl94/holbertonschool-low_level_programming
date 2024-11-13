@@ -37,6 +37,7 @@ char *str_concat(char *s1, char *s2)
 		l++;
 		k++;
 	}
+	ptr[k] = '\0';
 
 	return (ptr);
 }
