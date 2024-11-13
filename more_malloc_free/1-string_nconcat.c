@@ -32,12 +32,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k++;
 		m++;
 	}
-	while (l != n)
-	{
-		ptr[k] = s2[l];
-		l++;
-		k++;
-	}
+	if (n >= l)
+		{
+			while (s2[l] != '\0')
+			{
+				ptr[k] = s2[l];
+				l++;
+				k++;
+			}
+		}
+		else
+		{
+			while (l != n)
+			{
+				ptr[k] = s2[l];
+				l++;
+				k++;
+			}
+		}
 
 	return (ptr);
 }
