@@ -4,6 +4,7 @@
 /**
  * malloc_checked - allcate memory
  * @b: the variable type that must be allocated
+ * Return: pointer to allocated memory
  */
 
 void *malloc_checked(unsigned int b)
@@ -14,6 +15,6 @@ void *malloc_checked(unsigned int b)
 
 	if (i == NULL)
 		exit(98);
-	
+
 	return (i);
 }
