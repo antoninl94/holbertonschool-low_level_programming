@@ -33,8 +33,8 @@ int **alloc_grid(int width, int height)
 				i--;
 			}
 		free(grid);
-		}
 		return (NULL);
+		}
 	}
 	return (arr);
 }
