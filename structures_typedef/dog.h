@@ -10,11 +10,13 @@
  * containing his name, age and the name of the owner
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} d;
 void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+
 #endif
