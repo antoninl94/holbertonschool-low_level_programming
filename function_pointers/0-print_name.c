@@ -15,7 +15,9 @@ int _putchar(char c)
 }
 
 /**
- * 
+ * print_name - Print a name
+ * @name: name of the person
+ * @f: function to uppercase or not name
  */
 
 void print_name(char *name, void (*f)(char *))
