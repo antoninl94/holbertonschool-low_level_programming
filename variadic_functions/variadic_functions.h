@@ -13,7 +13,7 @@ void print_all(const char * const format, ...);
 typedef struct choices
 {
 	char *fmt;
-	void (*f)(va_list);
+	void (*f)(va_list lst);
 } choice;
 void str_c(va_list lst);
 void str_i(va_list lst);

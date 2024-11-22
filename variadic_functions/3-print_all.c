@@ -59,16 +59,19 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 	int i = 0;
-	int j = 0;
+	int j;
 
 	va_start(lst, format);
-	while (i != 4)
+	while (format[i] != '\0')
 	{
-		while (format[j] != '\0'&& format[j] != *arr[i].fmt)
-		{
-			if (format[j] == *arr[i].fmt)
+		j = 0;
+		while (j != 4)
+		{	
+			if (format[i] == *arr[j].fmt)
 			{
-				arr[i].f(lst);
+				arr[j].f(lst);
+				if (j < 3)
+					printf(", ");
 			}
 			j++;
 		}
