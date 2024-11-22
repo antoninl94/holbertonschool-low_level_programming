@@ -64,12 +64,12 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 
 	va_start(lst, format);
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
 		while (j != 4)
 		{
-			if (format != NULL && format[i] == *arr[j].fmt)
+			if (format[i] == *arr[j].fmt)
 			{
 				printf("%s", separator);
 				arr[j].f(lst);
