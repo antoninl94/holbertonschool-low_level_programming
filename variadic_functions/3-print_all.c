@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * str_c - return the c char
+ * print_char - return the c char
  * @lst: the char to return
  * Return: c
  */
@@ -11,7 +11,7 @@ void print_char(va_list lst)
 }
 
 /**
- * str_i - return the int i
+ * print_int - return the int i
  * @lst: the integer to return
  * Return: the int
  */
@@ -21,7 +21,7 @@ void print_int(va_list lst)
 }
 
 /**
- * str_f - return the float f
+ * print_float - return the float f
  * @lst: the float to return
  * Return: the float
  */
@@ -31,7 +31,7 @@ void print_float(va_list lst)
 }
 
 /**
- * str_s - return the string s
+ * print_string - return the string s
  * @lst: the string to return
  * Return: the string
  */
