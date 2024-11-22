@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
 
 /**
@@ -8,7 +5,7 @@
  * @lst: the char to return
  * Return: c
  */
-void str_c(va_list lst)
+void print_char(va_list lst)
 {
 	printf("%c", va_arg(lst, int));
 }
@@ -18,7 +15,7 @@ void str_c(va_list lst)
  * @lst: the integer to return
  * Return: the int
  */
-void str_i(va_list lst)
+void print_int(va_list lst)
 {
 	printf("%d", va_arg(lst, int));
 }
@@ -28,7 +25,7 @@ void str_i(va_list lst)
  * @lst: the float to return
  * Return: the float
  */
-void str_f(va_list lst)
+void print_float(va_list lst)
 {
 	printf("%f", va_arg(lst, double));
 }
@@ -38,9 +35,13 @@ void str_f(va_list lst)
  * @lst: the string to return
  * Return: the string
  */
-void str_s(va_list lst)
+void print_string(va_list lst)
 {
-	printf("%s", va_arg(lst, char*));
+	char *str = va_arg(lst, char*);
+
+	if (str == NULL)
+		str = "(nil)";
+	printf("%s", str);
 }
 
 /**
@@ -51,15 +52,16 @@ void str_s(va_list lst)
 void print_all(const char * const format, ...)
 {
 	va_list lst;
-	choice arr[] = {
-		{"c", str_c},
-		{"i", str_i},
-		{"f", str_f},
-		{"s", str_s},
+	format_type arr[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string},
 		{NULL, NULL}
 	};
 	int i = 0;
 	int j;
+	char *separator = "";
 
 	va_start(lst, format);
 	while (format[i] != '\0')
@@ -67,11 +69,11 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j != 4)
 		{
-			if (format[i] == *arr[j].fmt)
+			if (format != NULL && format[i] == *arr[j].fmt)
 			{
+				printf("%s", separator);
 				arr[j].f(lst);
-				if (i < 3)
-					printf(", ");
+				separator = ", ";
 			}
 			j++;
 		}
