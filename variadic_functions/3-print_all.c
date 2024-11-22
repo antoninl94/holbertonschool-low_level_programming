@@ -72,8 +72,6 @@ void print_all(const char * const format, ...)
 				arr[j].f(lst);
 				if (i < 3)
 					printf(", ");
-				else
-					printf("xxx");
 			}
 			j++;
 		}
