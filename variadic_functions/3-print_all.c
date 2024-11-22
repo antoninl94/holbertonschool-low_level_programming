@@ -66,11 +66,11 @@ void print_all(const char * const format, ...)
 	{
 		j = 0;
 		while (j != 4)
-		{	
+		{
 			if (format[i] == *arr[j].fmt)
 			{
 				arr[j].f(lst);
-				if (j < 3)
+				if (i < 3)
 					printf(", ");
 			}
 			j++;
