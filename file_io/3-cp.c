@@ -81,12 +81,12 @@ int main(int argc, char *argv[])
 	copy(argv[1], argv[2]);
 	if (copy(argv[1], argv[2]) == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't read from file argv[1]", 45);
+		write(STDERR_FILENO, "Error: Can't read from file argv[1]", 36);
 		exit(98);
 	}
-	if (createFile(argv[2]) == -1 || copy(argv[1], argv[2], 1024) == -1)
+	if (createFile(argv[2]) == -1 || copy(argv[1], argv[2]) == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't write to argv[2]", 39);
+		write(STDERR_FILENO, "Error: Can't write to argv[2]", 30);
 		exit(99);
 	}
 	return (0);
