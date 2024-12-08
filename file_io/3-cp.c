@@ -33,11 +33,6 @@ int copyFile(const char *file_from, const char *file_to)
 			exit(99);
 		}
 	}
-	if (readfile == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-		exit(98);
-	}
 	close(fdFile_from);
 	close(fdFile_to);
 	return (written);
