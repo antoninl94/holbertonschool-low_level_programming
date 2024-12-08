@@ -32,19 +32,22 @@ int copyFile(const char *file_from, const char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
+	}
 	if (readfile == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	if (written == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
-	}
 	close(fdFile_from);
 	close(fdFile_to);
+	while (close(fdFile_from) == -1 || close(fdFile_to) == -1)
+	{
+		if (close(fdFile_from) == -1)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFile_from);
+		else
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdFile_to);
+		exit(100);
+	}
 	return (written);
 }
 
