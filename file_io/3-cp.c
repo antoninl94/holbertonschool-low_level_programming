@@ -13,11 +13,6 @@ int copyFile(const char *file_from, const char *file_to)
 	char buffer[1024];
 
 	fdFile_from = open(file_from, O_RDONLY);
-	if (fdFile_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
 	fdFile_to = open(file_to, O_CREAT | O_TRUNC | O_RDWR, 0664);
 	while ((readfile = read(fdFile_from, buffer, 1024)) > 0)
 	{
