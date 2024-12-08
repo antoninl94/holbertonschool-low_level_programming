@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to", 28);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	copyFile(argv[1], argv[2]);
